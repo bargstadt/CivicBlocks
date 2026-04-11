@@ -144,6 +144,10 @@ ENV/
 env.bak/
 venv.bak/
 
+# Poetry
+# poetry.lock is intentionally NOT ignored — commit it for reproducible installs
+.poetry/
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -205,3 +209,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Voter file — never commit real Iowa voter data
+data/iowa_voter_file.csv
+data/iowa_voter_file_*.csv
+data/*.csv
+
+# TIGER/Line shapefiles — large binary files, re-downloadable
+data/tiger/
